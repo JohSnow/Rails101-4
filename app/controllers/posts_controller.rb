@@ -38,7 +38,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @group = Group.find(params[:group_id])
     @post = Post.find(params[:id])
     @post.destroy
       flash[:alert] = "Post deleted!"
